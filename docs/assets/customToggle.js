@@ -13,7 +13,7 @@ syncPaletteWithSystemPreference()
  */
 const systemPreferenceObserver = e => {
     if (localStorage.getItem("data-md-prefers-color-scheme") === "true") {
-        document.querySelector("body").setAttribute("data-md-color-scheme", (e.matches) ? "slate" : "fraunhofer")
+        document.querySelector("body").setAttribute("data-md-color-scheme", (e.matches) ? "slate" : "auto")
     }
 }
 const matchListener = window.matchMedia("(prefers-color-scheme: dark)")
