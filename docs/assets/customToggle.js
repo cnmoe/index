@@ -2,7 +2,7 @@
 
 function syncPaletteWithSystemPreference() {
     if (localStorage.getItem("data-md-prefers-color-scheme") === "true") {
-        scheme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "slate" : "fraunhofer"
+        scheme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "slate" : "auto"
         document.querySelector("body").setAttribute("data-md-color-scheme", scheme)
     }
 }
