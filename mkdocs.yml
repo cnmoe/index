@@ -34,27 +34,30 @@ theme:
     repo: fontawesome/brands/github-alt
   palette:
     - media: "(prefers-color-scheme: light)"
-      scheme: light
-      accent: deep orange
+      scheme: default
       toggle:
-        icon: material/brightness-auto
-        name: Switch to dark mode
+        icon: material/weather-sunny
+        name: Switch to system preference
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      accent: deep orange
       toggle:
-        icon: material/brightness-7
-        name: Switch to system preference
-    - media: "(prefers-color-scheme: auto)"
-      toggle:
-        icon: material/brightness-4
+        icon: material/weather-night
         name: Switch to light mode
+    - media: "(prefers-color-scheme: auto)"
+      scheme: auto
+      toggle:
+        icon: material/theme-light-dark
+        name: Switch to dark mode
+    
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/cnmoe
       name: GitHub
+
+extra_javascript:
+  - assets/customToggle.js
 
 # Extensions
 markdown_extensions:
@@ -98,11 +101,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Plugins
-plugins:
-
 # Page tree
 nav:
   - 主页: index.md
-  - 其它: other.md
   - 关于: about.md
