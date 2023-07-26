@@ -7,13 +7,36 @@ theme:
   language: zh
   features:
     - navigation.tabs
-  
-  favicon: assets/favicon.png
+    - content.action.view
+    - content.action.edit
+  favicon: assets/images/favicon.png
   icon:
     logo: logo
+    repo: fontawesome/brands/github-alt
+  palette:
 
-repo_name: cnmoe/docs
-repo_url: https://github.com/cnmoe/docs
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+repo_name: cnmoe/index
+repo_url: https://github.com/cnmoe/index
+edit_uri: edit/main/docs/
 copyright: <a href="https://icp.gov.moe/?keyword=20232090" target="_blank">萌ICP备20232090号</a>  <br> Copyright &copy; 2023 YuanHao
 
