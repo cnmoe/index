@@ -1,5 +1,6 @@
 site_name: YuanHao
 site_author: YuanHao
+site_description: YuanHao,原昊
 site_url: https://yuanhao.moe/
 repo_name: cnmoe/index
 repo_url: https://github.com/cnmoe/index
@@ -23,28 +24,31 @@ theme:
     - search.highlight
     - search.share
     - navigation.footer
+    - navigation.indexes
   favicon: assets/images/favicon.png
+  font:
+    text: Roboto
+    code: Roboto Mono
   icon:
     logo: logo
     repo: fontawesome/brands/github-alt
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
+    - media: "(prefers-color-scheme: light)"
+      scheme: light
+      accent: deep orange
       toggle:
         icon: material/brightness-auto
-        name: Switch to light mode
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default 
-      toggle:
-        icon: material/brightness-7
         name: Switch to dark mode
-    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference
+    - media: "(prefers-color-scheme: auto)"
       toggle:
         icon: material/brightness-4
-        name: Switch to system preference
+        name: Switch to light mode
 
 extra:
   social:
@@ -93,3 +97,12 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+# Plugins
+plugins:
+
+# Page tree
+nav:
+  - 主页: index.md
+  - 其它: other.md
+  - 关于: about.md
