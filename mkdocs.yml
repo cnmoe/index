@@ -1,4 +1,19 @@
-site_name: My Docs
+site_name: Docs
+site_author: YuanHao
+site_url: https://yuanhao.moe/
+
 theme:
   name: material
   language: zh
+  features:
+    - navigation.tabs
+  
+  favicon: assets/favicon.png
+  icon:
+    logo: logo
+
+repo_name: cnmoe/docs
+repo_url: https://github.com/cnmoe/docs
+
+copyright: Copyright &copy; 2023 YuanHao
+
