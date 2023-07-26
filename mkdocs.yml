@@ -1,33 +1,44 @@
 site_name: YuanHao
 site_author: YuanHao
 site_url: https://yuanhao.moe/
+repo_name: cnmoe/index
+repo_url: https://github.com/cnmoe/index
+edit_uri: edit/main/docs/
+copyright: <a href="https://icp.gov.moe/?keyword=20232090" target="_blank">萌ICP备20232090号</a>  <br> Copyright &copy; 2023 YuanHao
 
 theme:
   name: material
   language: zh
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
     - navigation.tabs
+    - navigation.path
+    - toc.follow
+    - toc.integrate
+    - navigation.sections
     - content.action.view
     - content.action.edit
+    - navigation.top
+    - search.highlight
+    - search.share
+    - navigation.footer
   favicon: assets/images/favicon.png
   icon:
     logo: logo
     repo: fontawesome/brands/github-alt
   palette:
-
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -35,8 +46,50 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
-repo_name: cnmoe/index
-repo_url: https://github.com/cnmoe/index
-edit_uri: edit/main/docs/
-copyright: <a href="https://icp.gov.moe/?keyword=20232090" target="_blank">萌ICP备20232090号</a>  <br> Copyright &copy; 2023 YuanHao
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cnmoe
+      name: GitHub
 
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:materialx.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
