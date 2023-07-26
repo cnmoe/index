@@ -2,7 +2,7 @@
 
 function syncPaletteWithSystemPreference() {
     if (localStorage.getItem("data-md-prefers-color-scheme") === "true") {
-        scheme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "slate" : "auto"
+        scheme = (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "slate" : "fraunhofer"
         document.querySelector("body").setAttribute("data-md-color-scheme", scheme)
     }
 }
@@ -13,7 +13,7 @@ syncPaletteWithSystemPreference()
  */
 const systemPreferenceObserver = e => {
     if (localStorage.getItem("data-md-prefers-color-scheme") === "true") {
-        document.querySelector("body").setAttribute("data-md-color-scheme", (e.matches) ? "slate" : "auto")
+        document.querySelector("body").setAttribute("data-md-color-scheme", (e.matches) ? "slate" : "fraunhofer")
     }
 }
 const matchListener = window.matchMedia("(prefers-color-scheme: dark)")
