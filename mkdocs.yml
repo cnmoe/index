@@ -36,17 +36,17 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       toggle:
-        icon: material/weather-sunny
-        name: 切换到自动模式
+        icon: material/brightness-7
+        name: 切换自动模式
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       toggle:
-        icon: material/weather-night
+        icon: material/brightness-4
         name: 切换到浅色模式
     - media: "(prefers-color-scheme: auto)"
       scheme: auto
       toggle:
-        icon: material/theme-light-dark
+        icon: material/brightness-auto
         name: 切换到深色模式
     
 
